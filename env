@@ -1,0 +1,6 @@
+FLASK_APP = main.py
+SECRET_KEY = 'LJKniup98df3%&#98hjkew8732bnew'
+SQLALCHEMY_DATABASE_URI = 'mysql://root@localhost/db_silabuz_flask'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+FLASK_DEBUG = 1
+FLASK_ENV=FLASK_DEVELOPMENT
