@@ -1,56 +1,9 @@
-{% extends "partials/layout.html" %}
-{% block content %}
-<div class="container" style="padding-left: 25%; margin-left: 3rem; margin-top: 6rem;">
-    <div class="card" style="width: 80%;">
-        <div class="card-header">
-            Datos Usuario
-        </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="mb-3 row">
-                        <label for="staticEmail" class="col-sm-4 col-form-label"><b>Usuario</b></label>
-                        <div class="col-sm-8">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail"
-                                value="{{ usuario.username }}">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="staticEmail" class="col-sm-4 col-form-label"><b>Email</b></label>
-                        <div class="col-sm-8">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail"
-                                value="{{ usuario.email }}">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="staticEmail" class="col-sm-4 col-form-label"><b>Rol</b></label>
-                        <div class="col-sm-8">
-                            {% for rol in roles %}
-                            {% if rol.id == usuario.role_id %}
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail"
-                                value="{{ rol.name }}">
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="staticEmail" class="col-sm-4 col-form-label"><b>Nombre</b></label>
-                        <div class="col-sm-8">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail"
-                                value="{{ usuario.name }}">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="mb-3 row">
-                        <label for="staticEmail" class="col-sm-4 col-form-label"><b>Avatar</b></label>
-                        <div class="col-sm-8">
-                            <img src="{{ usuario.avatar }}" alt="" srcset="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+{% extends 'layout.html' %}
+{% block contend %}
+<section class="container personagens">
+<div class="box-persona">
+    <img src="https://rickandmortyapi.com/api/character/avatar/191.jpeg" alt="" srcset="">
+    <h1>Kevin</h1>
 </div>
-{% endblock %}
+</section>
+{% endblock contend %}
