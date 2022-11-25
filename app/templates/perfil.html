@@ -1,9 +1,15 @@
 {% extends 'layout.html' %}
 {% block contend %}
-<section class="container personagens">
-<div class="box-persona">
-    <img src="https://rickandmortyapi.com/api/character/avatar/191.jpeg" alt="" srcset="">
-    <h1>Kevin</h1>
+
+<div class="box-persona col-md-6">
+    <div class="col-auto">
+        <img src="https://rickandmortyapi.com/api/character/avatar/191.jpeg" alt="" srcset="">
+    </div>
 </div>
-</section>
+<div class="col-md-6">
+    <h1>Nombre: {{personaje.name}}</h1>
+    <h1>Estado: {{ personaje.status }}</h1>
+    <h1>Genero: {{ personaje.gender }}</h1>
+</div>
+
 {% endblock contend %}
